@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поп-ит — ASMR Box</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="dot"></span> ASMR Box</div>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="pop.html">Плёнка</a></li>
+      <li><a href="slime.html">Слайм</a></li>
+      <li><a href="squish.html">Сквиш</a></li>
+      <li><a href="sand.html">Песочница</a></li>
+      <li><a href="spinner.html">Спиннер</a></li>
+      <li><a href="fabric.html">Ткань</a></li>
+      <li><a href="switches.html">Кнопки</a></li>
+      <li><a href="popit.html" class="active">Поп-ит</a></li>
+    </ul>
+  </nav>
+
+  <section class="work" id="popitRoot">
+    <a href="index.html" class="back-link">← Все игрушки</a>
+    <h1>Поп-ит</h1>
+    <p class="hint">Выдавливай пупырышки и возвращай их обратно — у каждого свой «поп» с высотой тона.</p>
+
+    <div class="stage">
+      <div class="hud">
+        <div class="stat">Нажатий: <b id="poCount">0</b></div>
+        <div class="stat">Выдавлено: <b id="poPushed">0</b></div>
+        <div class="stat">Рекорд: <b id="poRecord">0</b></div>
+      </div>
+
+      <div class="popit-board" id="popitBoard"></div>
+
+      <div class="sand-controls" style="margin-top:24px;">
+        <button id="poResetAllBtn" type="button">Вернуть все</button>
+        <button id="poResetRecordBtn" type="button">Сбросить рекорд</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>ASMR Box · поп-ит · звук в каждом касании</p>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="audio.js"></script>
+  <script src="popit.js"></script>
+</body>
+</html>
