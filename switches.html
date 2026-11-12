@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кнопки-переключатели — ASMR Box</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="dot"></span> ASMR Box</div>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="pop.html">Плёнка</a></li>
+      <li><a href="slime.html">Слайм</a></li>
+      <li><a href="squish.html">Сквиш</a></li>
+      <li><a href="sand.html">Песочница</a></li>
+      <li><a href="spinner.html">Спиннер</a></li>
+      <li><a href="fabric.html">Ткань</a></li>
+      <li><a href="switches.html" class="active">Кнопки</a></li>
+      <li><a href="popit.html">Поп-ит</a></li>
+    </ul>
+  </nav>
+
+  <section class="work" id="switchRoot">
+    <a href="index.html" class="back-link">← Все игрушки</a>
+    <h1>Кнопки-переключатели</h1>
+    <p class="hint">Щёлкай тумблерами, жми кнопки и двигай ползунки — у каждого свой тактильный звук.</p>
+
+    <div class="stage">
+      <div class="hud">
+        <div class="stat">Нажатий: <b id="swCount">0</b></div>
+        <div class="stat">Активно: <b id="swActive">0</b></div>
+        <div class="stat">Рекорд: <b id="swRecord">0</b></div>
+      </div>
+
+      <div class="switch-grid" id="switchGrid">
+        <!-- тумблеры -->
+        <div class="toggle" data-type="toggle"><span class="toggle-knob"></span></div>
+        <div class="toggle" data-type="toggle"><span class="toggle-knob"></span></div>
+        <div class="toggle" data-type="toggle"><span class="toggle-knob"></span></div>
+
+        <!-- круглые кнопки -->
+        <button class="round-btn" data-type="round" type="button">OK</button>
+        <button class="round-btn" data-type="round" type="button">GO</button>
+        <button class="round-btn" data-type="round" type="button">HI</button>
+
+        <!-- квадратные кнопки -->
+        <button class="square-btn" data-type="square" type="button">A</button>
+        <button class="square-btn" data-type="square" type="button">B</button>
+        <button class="square-btn" data-type="square" type="button">C</button>
+
+        <!-- ползунки -->
+        <label class="slider-wrap">
+          <input type="range" min="0" max="100" value="40" data-type="slider">
+        </label>
+        <label class="slider-wrap">
+          <input type="range" min="0" max="100" value="60" data-type="slider">
+        </label>
+        <label class="slider-wrap">
+          <input type="range" min="0" max="100" value="20" data-type="slider">
+        </label>
+
+        <!-- большие «плоские» кнопки -->
+        <button class="flat-btn" data-type="flat" type="button">Нажми меня</button>
+        <button class="flat-btn" data-type="flat" type="button">Ещё раз</button>
+        <button class="flat-btn" data-type="flat" type="button">И вот эту</button>
+      </div>
+
+      <div class="sand-controls" style="margin-top:24px;">
+        <button id="swAllOnBtn" type="button">Включить все</button>
+        <button id="swAllOffBtn" type="button">Выключить все</button>
+        <button id="swResetBtn" type="button">Сбросить рекорд</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>ASMR Box · кнопки-переключатели · звук в каждом касании</p>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="audio.js"></script>
+  <script src="switches.js"></script>
+</body>
+</html>

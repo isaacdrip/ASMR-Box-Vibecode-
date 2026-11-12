@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Слайм — ASMR Box</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="dot"></span> ASMR Box</div>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="pop.html">Плёнка</a></li>
+      <li><a href="slime.html" class="active">Слайм</a></li>
+      <li><a href="squish.html">Сквиш</a></li>
+      <li><a href="sand.html">Песочница</a></li>
+    </ul>
+  </nav>
+
+  <section class="work" id="slimeRoot">
+    <a href="index.html" class="back-link">← Все игрушки</a>
+    <h1>Тягучий слайм</h1>
+    <p class="hint">Зажми слайм и тяни в сторону — чем сильнее натяжение, тем выше звук. Отпусти — он чавкнет и упруго вернётся.</p>
+
+    <div class="stage">
+      <div class="hud">
+        <div class="stat">Натяжение: <b id="slimeStretch">0%</b></div>
+        <div class="stat">Максимум: <b id="slimeMax">0%</b></div>
+      </div>
+
+      <div class="slime-area" id="slimeArea">
+        <div class="slime-blob" id="slimeBlob"></div>
+      </div>
+
+      <div class="sand-controls" style="margin-top:24px;">
+        <button id="slimeResetBtn" type="button">Сбросить максимум</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>ASMR Box · слайм · звук в каждом касании</p>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="audio.js"></script>
+  <script src="slime.js"></script>
+</body>
+</html>
